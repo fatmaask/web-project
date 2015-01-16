@@ -10,9 +10,6 @@ body {
 	font-size: 12px;
 	line-height: 1.5em;
 	background-color: #1d1c1b;
-	/*background-image: url(images/tooplate_body.jpg);
-	background-repeat: repeat-x;
-	background-position: top */
 }
 
 a, a:link, a:visited { color: #d8852b; text-decoration: none; }
@@ -43,7 +40,7 @@ a.more {
 	color: #663908;
 	font-weight: bold;
 	font-size: 12px;
-	background: url(images/tooplate_more.jpg) no-repeat right center;
+	background: url(../images/tooplate_more.jpg) no-repeat right center;
 }
 
 a.more:hover {
@@ -86,7 +83,7 @@ em { color: #cf560d }
 	color:#cf560d;
 	margin:0 0 10px;
 	padding: 3px 0 3px 25px;
-	background: transparent url(images/tooplate_list.jpg) scroll 0 8px  no-repeat;
+	background: transparent url(../images/tooplate_list.jpg) scroll 0 8px  no-repeat;
 }
 
 .tooplate_list li a {
@@ -101,7 +98,7 @@ em { color: #cf560d }
 	width: 100%;
 	height: 251px;
 	margin-bottom: 10px;
-	background: url(images/tooplate_header.jpg) no-repeat top center;
+	background: url(../images/tooplate_header.jpg) no-repeat top center;
 	background-color:#020202; /* changed */
 }
 
@@ -110,7 +107,7 @@ em { color: #cf560d }
 	height: 251px;
 	padding: 0 30px;
 	margin: 0 auto;
-	background: url(images/tooplate_header.jpg) no-repeat top center
+	background: url(../images/tooplate_header.jpg) no-repeat top center
 }
 
 /* menu */
@@ -151,7 +148,7 @@ em { color: #cf560d }
 
 #tooplate_menu ul li a:hover, #tooplate_menu ul .current {
 	color: #ffa400;
-	background: url(images/tooplate_menu_hover.png) bottom center no-repeat;
+	background: url(../images/tooplate_menu_hover.png) bottom center no-repeat;
 }
 #tooplate_menu ul li:first-child{
 
@@ -174,7 +171,7 @@ em { color: #cf560d }
 	height: 54px;
 	color: #F60;
 	text-indent: -10000px;
-	background: url(images/tooplate_logo.png) no-repeat;
+	background: url(../images/tooplate_logo.png) no-repeat;
 }
 
 #tooplate_main_wrapper {
@@ -192,13 +189,13 @@ em { color: #cf560d }
 #tooplate_top {
 	width: 940px;
 	height: 20px;
-	background: url(images/tooplate_main_top.png) no-repeat
+	background: url(../images/tooplate_main_top.png) no-repeat
 }
 
 #tooplate_bottom {
 	width: 940px;
 	height: 20px;
-	background: url(images/tooplate_main_bottom.png) no-repeat
+	background: url(../images/tooplate_main_bottom.png) no-repeat
 }
 
 #tooplate_content_wrapper {
@@ -209,18 +206,18 @@ em { color: #cf560d }
 #tooplate_content {
 	width: 560px;
 	padding: 10px 20px 20px 40px;
-	background: url(images/tooplate_content_body.png) repeat-y
+	background: url(../images/tooplate_content_body.png) repeat-y
 }
 
 #tc_top {
 	width: 620px;
 	height: 20px;
-	background: url(images/tooplate_content_top.jpg) no-repeat
+	background: url(../images/tooplate_content_top.jpg) no-repeat
 }
 #tc_bottom {
 	width: 620px;
 	height: 20px;
-	background: url(images/tooplate_content_bottom.jpg) no-repeat
+	background: url(../images/tooplate_content_bottom.jpg) no-repeat
 }
 
 .col_w300 { width: 250px }
@@ -236,7 +233,7 @@ margin-bottom: 30px;
 	height: 40px;
 	margin: 0 0 10px -40px;
 	padding: 0 0 0 15px;
-	background: url(images/tooplate_post_header.png) no-repeat top left;
+	background: url(../images/tooplate_post_header.png) no-repeat top left;
 }
 
 .post_header p.date {
@@ -457,13 +454,13 @@ margin-bottom: 30px;
 #tooplate_sidebar_top {
 	width: 280px;
 	height: 25px;
-	background: url(images/tooplate_sidebar_top.jpg) no-repeat
+	background: url(../images/tooplate_sidebar_top.jpg) no-repeat
 }
 
 #tooplate_sidebar_bottom {
 	width: 280px;
 	height: 25px;
-	background: url(images/tooplate_sidebar_bottom.jpg) no-repeat
+	background: url(../images/tooplate_sidebar_bottom.jpg) no-repeat
 }
 
 #tooplate_sidebar {
@@ -476,14 +473,14 @@ margin-bottom: 30px;
 	height: 250px;
 	padding: 0 15px 20px;
 	margin-bottom: 30px;
-	background: url(images/sb_divider.jpg) bottom repeat-x
+	background: url(../images/sb_divider.jpg) bottom repeat-x
 }
 
 .sb_box {
 	width: 240px;
     padding: 0 20px 20px;
 	margin-bottom: 30px;
-	background: url(images/sb_divider.jpg) bottom repeat-x
+	background: url(../images/sb_divider.jpg) bottom repeat-x
 }
 .sb_box h3 {
 	padding-bottom: 10px;
@@ -646,19 +643,19 @@ margin-bottom: 30px;
 
 #str:before {
 	content:'';
-	background-image: url('images/str.png');
+	background-image: url('../images/str.png');
 	background-repeat:no-repeat;
 	padding-right:38px;
 }
 #agl:before {
 	content:'';
-	background-image: url('images/agi.png');
+	background-image: url('../images/agi.png');
 	background-repeat:no-repeat;
 	padding-right:38px;
 }
 #int:before {
 	content:'';
-	background-image: url('images/int.png');
+	background-image: url('../images/int.png');
 	background-repeat:no-repeat;
 	padding-right:38px;
 }
