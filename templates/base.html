@@ -3,7 +3,8 @@ $def with(content)
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Dota 2 | Items</title>
+  $if content.get("title") == None: <title>Dota 2</title>
+  $else: <title>Dota 2 | $content.get("title")</title>
   <link rel="icon" type="image/png" href="/static/images/favicon.png">
   <meta name="keywords" content="city blog, gallery theme, free templates, website templates, CSS, HTML" />
   <meta name="description" content="City Blog Gallery Theme is a free website template provided by tooplate.com" />
@@ -16,12 +17,11 @@ $def with(content)
 
       <div id="tooplate_menu">
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/heroes">Heroes</a></li>
-          <li><a href="/items" class="current">Items</a></li>
-          <li><a href="/teams">Teams</a></li>
-          <li><a href="/guides">Guides</a></li>
-          <li><a href="/about">About</a></li>
+          $for (url, text) in menu:
+          <li>
+            $if content.get("url") == url: <a class="current" href="$url">
+              $else : <a href="$url">
+                $text</a></li>
         </ul>
       </div> <!-- end of tooplate_menu -->
 

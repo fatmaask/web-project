@@ -10,7 +10,18 @@ urls = (
 
 )
 
-render = web.template.render('templates/', base='base')
+varglobals = {
+   'menu' : [
+        ("/", "Home"),
+        ("/heroes", "Heroes"),
+        ("/items", "Items"),
+        ("/teams", "Teams"),
+        ("/guides", "Guides"),
+        ("/about", "About")
+    ]
+}
+
+render = web.template.render('templates/', base='base', globals=varglobals)
 
 class index:
     def GET(self):
