@@ -10,7 +10,7 @@ urls = (
 
 )
 
-render = web.template.render('templates/')
+render = web.template.render('templates/', base='base')
 
 class index:
     def GET(self):
@@ -35,19 +35,7 @@ class guides_page:
 class about_page:
     def GET(self):
         return render.about()
-"""
-class book_list:
-    def GET(self):
-        return render.books(books)
 
-
-class book:
-    def GET(self, book_id):
-        print(type(book_id))
-        book = books[int(book_id)]
-        return render.book(book)
-
-"""
 if __name__ == "__main__":
     app = web.application(urls, globals())
     web.httpserver.runsimple(app.wsgifunc(), ("127.0.0.1", 1234))
