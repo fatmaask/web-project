@@ -7,7 +7,6 @@ urls = (
     '/teams', 'teams_page',
     '/guides', 'guides_page',
     '/about', 'about_page'
-
 )
 
 varglobals = {
