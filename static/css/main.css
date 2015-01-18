@@ -681,13 +681,23 @@ margin-bottom: 30px;
 	float:left;
 }
 #mana {
-	padding-right: 5px;
+	margin: 2px;
 }
 #cooldown{
-	padding-right: 5px;
+	margin: 2px;
 }
 .skill-paragraph{
 	color: #58412a;
 	font-size: 13px;
 	
+}
+.skill-img{
+	margin: 5px;
+	border:3px solid black;
+}
+#manacost-text{
+	font-weight: bold;
+}
+#cooldown-text{
+	font-weight: bold;
 }
