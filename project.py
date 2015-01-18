@@ -6,10 +6,14 @@ urls = (
     '/items', 'items_page',
     '/teams', 'teams_page',
     '/guides', 'guides_page',
+<<<<<<< HEAD
     '/about', 'about_page',
     '/hero', 'hero_page'
 
 
+=======
+    '/about', 'about_page'
+>>>>>>> origin/master
 )
 
 varglobals = {
