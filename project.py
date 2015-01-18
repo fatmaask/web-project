@@ -6,7 +6,9 @@ urls = (
     '/items', 'items_page',
     '/teams', 'teams_page',
     '/guides', 'guides_page',
-    '/about', 'about_page'
+    '/about', 'about_page',
+    '/hero', 'hero_page'
+
 
 )
 
@@ -47,6 +49,9 @@ class about_page:
     def GET(self):
         return render.about()
 
+class hero_page:
+    def GET(self):
+        return render.hero()
 if __name__ == "__main__":
     app = web.application(urls, globals())
     web.httpserver.runsimple(app.wsgifunc(), ("127.0.0.1", 1234))

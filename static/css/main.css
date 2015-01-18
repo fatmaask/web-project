@@ -567,7 +567,16 @@ margin-bottom: 30px;
 /*
 ============================================================================================
 */
-
+.content-hr{
+	margin-top: 30px;
+	margin-bottom: 30px;
+	clear: both;
+}
+.content-item-hr{
+	margin-top: 5px;
+	margin-bottom:5px;
+	clear: both;
+}
 .content-img{
 	height:auto;
 	width:560px;
@@ -612,9 +621,11 @@ margin-bottom: 30px;
 
 }
 .items-type-p1{
+	font-size:12px;
 	padding-right:10px ;
 }
 .items-type-p2{
+	font-size:12px;
 	font-weight: bold;
 }
 #items-content01{
@@ -658,4 +669,25 @@ margin-bottom: 30px;
 	background-image: url('../images/int.png');
 	background-repeat:no-repeat;
 	padding-right:38px;
+}
+.hero-full{
+	border:3px solid black;
+	margin-bottom: 20px;
+}
+.overview-td{
+	font-weight:bolder;
+}
+#overview-first-table{
+	float:left;
+}
+#mana {
+	padding-right: 5px;
+}
+#cooldown{
+	padding-right: 5px;
+}
+.skill-paragraph{
+	color: #58412a;
+	font-size: 13px;
+	
 }
