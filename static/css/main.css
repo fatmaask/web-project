@@ -701,3 +701,9 @@ margin-bottom: 30px;
 #cooldown-text{
 	font-weight: bold;
 }
+.heroes-img{
+	opacity: 0.75;
+}
+.heroes-img:hover{
+	opacity:1;
+}

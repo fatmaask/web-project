@@ -8,6 +8,8 @@ $var title: Teams
 	<div id="tooplate_content">
   $for team in teams:
     <h2>$team['name']</h2>
+    $if team['name']=="NewBee":
+      <h3>The Last Champion of the International</h3>
     <img class="teams-img"src="$team['image']">
     <p class="teams-p">$team['content']</p>
     <h4>Players</h4>

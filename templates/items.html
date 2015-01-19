@@ -1,4 +1,4 @@
-$var url: /items
+$def with(items)
 $var title: Items
         <h1 width="" align="center">Dota 2 In-Game Items</h1>
         <div id="tooplate_content_wrapper">
@@ -108,79 +108,20 @@ $var title: Items
 
                 </div><!--end of #items-content01 -->
                 <div id="items-content02">
-                <table border="0" cellspacing="0" cellpadding="0">
-                    <tr>
-                        <td width="510px" colspan="11"><h4>Clarity</h4></td>
-                    </tr>
-                    <tr valign="top">
-                        <td><img class="items-img" src="/static/images/items/clarity_lg.png"></td>
-                        <td width="230px"><p class="items-type-p1">Use: Restores mana on the target unit over time.
-                            If the unit is attacked, the effect is lost</p></td>
-                        <td valign="top" width="230px">
-                            <p class="items-type-p2">DURATION: 40<br>
-                            MANA RESTORED: 150</p></td>
-                    </tr>
-                </table>
-                <hr class="content-item-hr">
 
-                <table border="0" cellspacing="0" cellpadding="0">
+                $for item in items:
+                	<table border="0" cellspacing="0" cellpadding="0">
                     <tr>
-                        <td width="510px" colspan="11"><h4>Tango</h4></td>
+                    <td width="510px" colspan="11"><h4>$item['name']</h4></td>
                     </tr>
                     <tr valign="top">
-                        <td><img class="items-img" src="/static/images/items/tango_lg.png"></td>
-                        <td width="230px"><p class="items-type-p1">Use: Eat Tree - Consume a tree to restore health over time. Comes with 4 charges.<br>Use on an allied hero to give them one Tango. </p></td>
-                        <td width="230px">
-                            <p class="items-type-p2">DURATION: 16<br>
-                            HEALTH RESTORED: 115</p></td>
+                    <td><img class="items-img" src="$item['image']"></td>
+                    <td width="230px"><p class="items-type-p1">$item['first']</p></td>
+                    <td valign="top" width="230px">
+                    <p class="items-type-p2">$item['second']</p></td>
                     </tr>
-                </table>
-                <hr class="content-item-hr">
-
-                <table border="0" cellspacing="0" cellpadding="0">
-                    <tr>
-                        <td width="510px" colspan="11"><h4>Healing Salve</h4></td>
-                    </tr>
-                    <tr valign="top">
-                        <td><img class="items-img" src="/static/images/items/flask_lg.png"></td>
-                        <td width="230px"><p class="items-type-p1">Use: Regenerate - Restores HP on the target unit over time. If the unit is attacked, the effect is lost.</p></td>
-                        <td width="230px">
-                            <p class="items-type-p2">DURATION: 10<br>
-                            HEALTH RESTORED: 400</p></td>
-                    </tr>
-                </table>
-                <hr class="content-item-hr">
-
-                <table border="0" cellspacing="0" cellpadding="0">
-                    <tr>
-                        <td width="510px" colspan="11"><h4>Smoke of Deceit</h4></td>
-                    </tr>
-                    <tr valign="top">
-                        <td><img class="items-img" src="/static/images/items/smoke_of_deceit_lg.png"></td>
-                        <td width="230px"><p class="items-type-p1">Use: Upon activation, the user and all nearby allied player-controlled units gain invisiblity and bonus movement speed for a brief time. Minimap icons will also be hidden. Upon moving within 1025 range of an enemy hero or tower, the invisibility is lost. </p>
-                        </td>
-                        <td width="230px">
-                            <p class="items-type-p2">
-                            BONUS SPEED: 15%<br>
-                            DURATION: 35<br>
-                            COOLDOWN: 90</p>
-                        </td>
-                    </tr>
-                </table>
-                <hr class="content-item-hr">
-
-                <table border="0" cellspacing="0" cellpadding="0">
-                    <tr>
-                        <td width="510px" colspan="11"><h4>Town Portal Scroll</h4></td>
-                    </tr>
-                    <tr valign="top">
-                        <td><img class="items-img" src="/static/images/items/tpscroll_lg.png"></td>
-                        <td width="230px"><p class="items-type-p1">Use: Teleport - Teleports you to a target friendly building.</p></td>
-                        <td width="230px">
-                            <p class="items-type-p2">COOLDOWN: 65<br>
-                            MANA COST: 75</p></td>
-                    </tr>
-                </table>
+                	</table>
+                	<hr class="content-item-hr">
 
                 </div><!--end of #items-content02 -->
 

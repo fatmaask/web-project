@@ -1,113 +1,73 @@
-$var title: Earth Shaker
+$def with(hero, quote, abilities)
+$var title: $hero['name']
 <div id="tooplate_content_wrapper">
 	<div id="tc_top"></div>
 
 	<div id="tooplate_content">
 <center>
-	<h2>Earth Shaker</h2>
-	<img class="hero-full" src="/static/images/heroes/earthshaker_full.png">
+	<h2>$hero['name']</h2>
+	<img class="hero-full" src="$hero['image_full']">
 </center>
         <h3>Overview</h3>
         <table border="0" id="overview-first-table">
         	<tbody>
           	<tr>
           		<td class="overview-td">Faction:</td>
-          		<td>The Dire</td>
+          		<td>$hero['faction']</td>
           	</tr>
           	<tr>
           		<td class="overview-td">Attack Type:</td>
-          		<td>Melee</td>
+          		<td>$hero['attack_type']</td>
           	</tr>
           	<tr>
           		<td class="overview-td">Primary Attribute:</td>
-          		<td>Strength</td>
+          		<td>$hero['primary_attribute']</td>
           	</tr>
           	<tr>
           		<td class="overview-td" valign="top">Role(s):</td>
-          		<td width="150px">Disabler, Initiator, Support, Lane Support</td>
+          		<td width="150px">$hero['roles']</td>
           	</tr>
           </tbody>
         </table>
         <table>
         	<tr>
-        		<td><img src="../static/images/str.png"></td>
-        		<td>22+2.9/level</td>
+        		<td><img src="/static/images/str.png"></td>
+        		<td>$hero['str']</td>
         	</tr>
         	<tr>
-        		<td><img src="../static/images/agi.png"></td>
-        		<td>12+1.4/level</td>
+        		<td><img src="/static/images/agi.png"></td>
+        		<td>$hero['agi']</td>
         	</tr>
         	<tr>
-        		<td><img src="../static/images/int.png"></td>
-        		<td>16+1.8/level</td>
+        		<td><img src="/static/images/int.png"></td>
+        		<td>$hero['int']</td>
         	</tr>
         </table>
         <hr class="content-hr">
         <h3>Bio</h3>
-        <p>Like a golem or gargoyle, Earthshaker was one with the earth but now walks freely upon it. Unlike those other entities, he created himself through an act of will, and serves no other master. In restless slumbers, encased in a deep seam of stone, he became aware of the life drifting freely above him. He grew curious. During a season of tremors, the peaks of Nishai shook themselves loose of avalanches, shifting the course of rivers and turning shallow valleys into bottomless chasms. When the land finally ceased quaking, Earthshaker stepped from the settling dust, tossing aside massive boulders as if throwing off a light blanket. He had shaped himself in the image of a mortal beast, and named himself Raigor Stonehoof. He bleeds now, and breathes, and therefore he can die. But his spirit is still that of the earth; he carries its power in the magical totem that never leaves him. And on the day he returns to dust, the earth will greet him as a prodigal son.</p><hr class="content-hr">
+        <p>$hero['bio']</p>
+        <hr class="content-hr">
         <h3>Abilities</h3>
         <table>
         	<tbody>
-        		<tr valign="top">
-        			<td><img class="skill-img" src="/static/images/skills/earthshaker_fissure.png"></td>
-        			<td>
-				<h5>Fissure</h5>
+        		
+              $for ability in abilities:
+                $for a in ability['abilities']
+                  <tr valign="top">
+        			    <td><img class="skill-img" src="$a['image']"></td>
+        			    <td>
+			            <h5>$a['name']</h5>
 
-				<p class="skill-paragraph">Slams the ground with a mighty totem, creating an impassible ridge of stone while stunning and damaging enemy units in a line.</p>
+				          <p class="skill-paragraph">$a['description']</p>
 
-				<img id="mana" src="/static/images/mana.png"> <span id="manacost-text">Mana Cost: 125/140/155/170</span><br>
-				<img id="cooldown" src="/static/images/cooldown.png"> <span id="cooldown-text">Cooldown: 15</span>
+				          <img id="mana" src="/static/images/mana.png"> <span id="manacost-text">Mana Cost: $a['manacost']</span><br>
+				          <img id="cooldown" src="/static/images/cooldown.png"> <span id="cooldown-text">Cooldown: $a['cooldown']</span>
 
-			</td>
-        		</tr>
+			            </td>
+        		      </tr>
         	</tbody>
         </table>
-        <table>
-        	<tbody>
-        		<tr valign="top">
-        			<td><img class="skill-img" src="/static/images/skills/earthshaker_enchant_totem.png"></td>
-        			<td>
-				<h5>Enchant Totem</h5>
-
-				<p class="skill-paragraph">Empowers Earthshaker's totem, causing it to deal extra damage on the next attack.</p>
-
-				<img id="mana" src="/static/images/mana.png"> <span id="manacost-text">Mana Cost: 125/140/155/170</span><br>
-				<img id="cooldown" src="/static/images/cooldown.png"> <span id="cooldown-text">Cooldown: 15</span>
-
-			</td>
-        		</tr>
-        	</tbody>
-        </table>
-        <table>
-        	<tbody>
-        		<tr valign="top">
-        			<td><img class="skill-img" src="/static/images/skills/earthshaker_aftershock.png"></td>
-        			<td>
-				<h5>Aftershock</h5>
-
-				<p class="skill-paragraph">Causes the earth to shake underfoot, adding additional damage and stuns to nearby enemy units when Earthshaker casts his abilities.</p>
-				<img id="mana" src="/static/images/mana.png"> <span id="manacost-text">Mana Cost: 125/140/155/170</span><br>
-				<img id="cooldown" src="/static/images/cooldown.png"> <span id="cooldown-text">Cooldown: 15</span>
-
-			</td>
-        		</tr>
-        	</tbody>
-        </table>
-        <table>
-        	<tbody>
-        		<tr valign="top">
-        			<td><img class="skill-img" src="/static/images/skills/earthshaker_echo_slam.png"></td>
-        			<td>
-				<h5>Echo Slam</h5>
-
-				<p class="skill-paragraph">Shockwaves travel through the ground, damaging enemy units. Each enemy hit causes an echo to damage nearby units. Upgradable by Aghanim's Scepter.</p>
-				<img id="mana" src="/static/images/mana.png"> <span id="manacost-text">Mana Cost: 125/140/155/170</span><br>
-				<img id="cooldown" src="/static/images/cooldown.png"> <span id="cooldown-text">Cooldown: 15</span>
-			</td>
-        		</tr>
-        	</tbody>
-        </table>
-
+    
     </div>
 
 <div id="tc_bottom"></div>

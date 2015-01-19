@@ -1,84 +1,98 @@
+$def with(heroes)
 $var url: /heroes
 $var title: Heroes
-        <h1 width="" align="center">Heroes</h1>
-        <div id="tooplate_content_wrapper">
-        	<div id="tc_top"></div>
-
-        	<div id="tooplate_content">
-
+<h1 width="" align="center">Heroes</h1>
+    <div id="tooplate_content_wrapper">
+    <div id="tc_top"></div>
+        <div id="tooplate_content">
                 <!-- STR -->
-								<div class="header-container">
-                	<span class="heroes-header" id="str">Strength</span>
-								</div>
-                <hr class="contetn-hr">
-                <table border="0" align="center">
-                    <thead>
-                        <tr align="center">
-                            <td width="150"></td>
-                            <td width="100"><h5>Roles</h5></td>
-                            <td width="100"><h5>Attack Type</h5></td>
-                            <td width="100"><h5>Faction</h5></td>
-                    </thead>
-                    <tbody>
+        <div class="header-container">
+        <span class="heroes-header" id="str">Strength</span>
+		</div>
+        <hr class="contetn-hr">
+        <table border="0" align="center">
+            <thead>
+                <tr align="center">
+                    <td width="127"></td>
+                    <td width="194"><h5>Roles</h5></td>
+                    <td width="102"><h5>Attack Type</h5></td>
+                    <td width="102"><h5>Faction</h5></td>
+                </tr>
+            </thead>
+            <tbody>
+                $for hero in heroes:
+                	$ hero_name = hero['name'].replace(" ","_")
+                    $if hero['primaryAttribute']=="Strength":
                         <!-- STR HERO -->
                         <tr align="center">
-                            <td><h6>Earth Shaker</h6><a href="/hero"><img class="items-img" src="/static/images/heroes/earthshaker.jpg">
-                            </a></td>
-                            <td>Disabler, Initiator, Support, Lane Support</td>
-                            <td>Melee</td>
-                            <td>The Dire</td>
+                        <td><h6>$hero['name']</h6><a href="/hero/$hero_name/$hero['id']"><img class="heroes-img" src="$hero['image']">
+                        </a></td>
+                        <td>$hero['roles']</td>
+                        <td>$hero['attackType']</td>
+                        <td>$hero['faction']</td>
                         </tr>
-                    </tbody>
-                </table>
+            </tbody>
+        </table>
 
                 <!-- AGILITIES -->
-								<div class="header-container">
-									<span class="heroes-header" id="agl">Agility</span>
-								</div>
-                <hr class="contetn-hr">
-                <table border="0" align="center">
-                    <thead>
+		<div class="header-container">
+        <span class="heroes-header" id="agl">Agility</span>
+		</div>
+        <hr class="contetn-hr">
+        <table border="0" align="center">
+            <thead>
+                <tr align="center">
+                    <td width="127"></td>
+                    <td width="194"><h5>Roles</h5></td>
+                    <td width="102"><h5>Attack Type</h5></td>
+                    <td width="102"><h5>Faction</h5></td>
+                </tr>
+            </thead>
+            <tbody>
+                $for hero in heroes:
+                	$ hero_name = hero['name'].replace(" ","_")
+                    $if hero['primaryAttribute']=="Agility":
+                        <!-- AGI HERO -->
                         <tr align="center">
-                            <td width="150"></td>
-                            <td width="100"><h5>Roles</h5></td>
-                            <td width="100"><h5>Attack Type</h5></td>
-                            <td width="100"><h5>Faction</h5></td>
-                    </thead>
-                    <tbody>
-                        <!-- AGILITY HERO -->
-                        <tr align="center">
-                            <td><h6>Earth Shaker</h6><img class="items-img" src="/static/images/heroes/earthshaker.jpg"></td>
-                            <td>Disabler, Initiator, Support, Lane Support</td>
-                            <td>Melee</td>
-                            <td>The Dire</td>
+                        <td><h6>$hero['name']</h6><a href="/hero/$hero_name/$hero['id']"><img class="heroes-img" src="$hero['image']">
+                        </a></td>
+                        <td>$hero['roles']</td>
+                        <td>$hero['attackType']</td>
+                        <td>$hero['faction']</td>
                         </tr>
-                    </tbody>
-                </table>
+            </tbody>
+        </table>
 
-                <!-- Int -->
-								<div class="header-container">
-									<span class="heroes-header" id="int">Intelligence</span>
-								</div>
-                <hr class="contetn-hr">
-                <table border="0" align="center">
-                    <thead>
+                <!-- INT -->
+		<div class="header-container">
+	   <span class="heroes-header" id="int">Intelligence</span>
+		</div>
+        <hr class="contetn-hr">
+        <table border="0" align="center">
+            <thead>
+                <tr align="center">
+                    <td width="127"></td>
+                    <td width="194"><h5>Roles</h5></td>
+                    <td width="102"><h5>Attack Type</h5></td>
+                    <td width="102"><h5>Faction</h5></td>
+                </tr>
+            </thead>
+            <tbody>
+            <!-- INT HERO -->
+                $for hero in heroes:
+                	$ hero_name = hero['name'].replace(" ","_")
+                    $if hero['primaryAttribute']=="Intelligence":
                         <tr align="center">
-                            <td width="150"></td>
-                            <td width="100"><h5>Roles</h5></td>
-                            <td width="100"><h5>Attack Type</h5></td>
-                            <td width="100"><h5>Faction</h5></td>
-                    </thead>
-                    <tbody>
-                        <!-- INT HERO -->
-                        <tr align="center">
-                            <td><h6>Earth Shaker</h6><img class="items-img" src="/static/images/heroes/earthshaker.jpg"></td>
-                            <td>Disabler, Initiator, Support, Lane Support</td>
-                            <td>Melee</td>
-                            <td>The Dire</td>
+                        <td><h6>$hero['name']</h6><a href="/hero/$hero_name/$hero['id']"><img class="heroes-img" src="$hero['image']">
+                        </a></td>
+                        <td>$hero['roles']</td>
+                        <td>$hero['attackType']</td>
+                        <td>$hero['faction']</td>
                         </tr>
-                    </tbody>
-                </table>
-            </div>
+            </tbody>
+        </table>
+                        
+        </div>
 
-			<div id="tc_bottom"></div>
-        </div> <!-- end of content wrapper -->
+	<div id="tc_bottom"></div>
+    </div> <!-- end of content wrapper -->
