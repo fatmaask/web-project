@@ -4,22 +4,20 @@ $var title: Teams
 
 <center><h1>Teams</h1></center>
 <div id="tooplate_content_wrapper">
-
 	<div id="tc_top"></div>
-
 	<div id="tooplate_content">
-    $for team in teams:
-      <h2>$team['name']</h2>
-      <img class="teams-img"src="$team['image']">
-      <p class="teams-p">$team['content']</p>
-      <h4>Players</h4>
-      <center>
-      $for p in team['players']:
-        <a class="player-name" width="108px" height="auto" href="javascript::void()">$p['name']</a>
-      </center>
-      $for p in team['players']:
-        <a href="javascript::void()"><img class="player-img"src="$p['image']"></a>
-      <hr class="content-hr">
+  $for team in teams:
+    <h2>$team['name']</h2>
+    <img class="teams-img"src="$team['image']">
+    <p class="teams-p">$team['content']</p>
+    <h4>Players</h4>
+    <center>
+    $for p in team['players']:
+      <a class="player-name" width="108px" height="auto" href="javascript::void()">$p['name']</a>
+    </center>
+    $for p in team['players']:
+      <a href="javascript::void()"><img class="player-img"src="$p['image']"></a>
+    <hr class="content-hr">
   </div>
   <div id="tc_bottom"></div>
-</div> <!-- end of content wrapper -->
+</div>
