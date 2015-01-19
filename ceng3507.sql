@@ -51,7 +51,7 @@ INSERT INTO `abilities` (`ability_id`, `name`, `description`, `image`, `manacost
 -- Table structure for table `announcaments`
 --
 
-CREATE TABLE IF NOT EXISTS `announcaments` (
+CREATE TABLE IF NOT EXISTS `announcements` (
   `announcement_id` int(11) NOT NULL,
   `headline` varchar(128) NOT NULL,
   `image` varchar(128) NOT NULL,
@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS `announcaments` (
 -- Dumping data for table `announcaments`
 --
 
-INSERT INTO `announcaments` (`announcement_id`, `headline`, `image`, `content`) VALUES
+INSERT INTO `announcements` (`announcement_id`, `headline`, `image`, `content`) VALUES
 (1, 'Preparing for International', '/static/images/announcement01.jpg', 'We wanted to share some information about The International so that you’re able to start making room in your schedules. This year the Main Event in Seattle will include 16 teams and will run for 6 full days, from Monday August 3rd through Saturday August 8th. Ticket availability will be announced on this blog prior to going on sale. Team invitations will occur shortly after May 1st.'),
 (2, 'The Shifting Snows Update', '/static/images/announcement02.jpg', 'Light dwindles and cold creeps in. The Shifting Snows Update has arrived, bringing with it this year’s Winter Map as well as a small gameplay update. As heroes shiver down the lanes to meet their fate, a new effigy material has emerged from the ice, new treasures have brought new armor to warm by the fire, and the arrival of Gift Wrap heralds the season of Givening. Check out the Shifting Snows Update page for more information.'),
 (3, 'New Bloom 2015 Call to Arms', '/static/images/announcement03.jpg', 'Once again, we’re putting out a call to artists to create items based around the themes of Chinese New Year, Chinese history, and springtime, and submit them to the Dota 2 Workshop to be considered for the next New Bloom Festival. This time around we would like to ask artists to avoid the use of dragons and written Chinese characters, as well any concepts that involve human skulls, blood and gore. Additionally, to have the best chance of having your work make it into the game, please be careful not to mix cultural concepts in your designs, such as traditional divisions between the dress of children and adults, warriors and civilians and upper and lower classes. Also, our workshop particle process is due to be reworked, so please refrain from using custom particles in your submission.\r\n\r\nRemember to mark your submissions with the “Spring2015″ tag when placing your items on the Workshop. All submissions must be on the Dota 2 Workshop by January 19th. To everyone else: remember to visit the workshop and vote through your queue to make sure your voice is heard.\r\n\r\nAlso, the excellent people at WeLoveFine are hosting a contest for Dota 2 merchandise designs for the New Bloom Festival, so if your talents lean toward creating awesome swag, they’ll have you covered.');
